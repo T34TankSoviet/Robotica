@@ -62,6 +62,33 @@
 
       <p>Imagens tiradas da Inteligência artificial PopAi<p>
       <p>Link do site:https://www.popai.pro/</p>
+      <!-- Adicione um botão para mudar o tema -->
+<button id="dark-mode-btn">Mudar para escuro</button>
+
+<!-- Adicione um estilo CSS para mudar o tema -->
+<style>
+  /* Defina as cores de fundo e texto padrão */
+  :root {
+    --background-color: #f2f2f2; /* Cor de fundo padrão */
+    --text-color: #333; /* Cor de texto padrão */
+  }
+
+  /* Defina as cores de fundo e texto para o tema escuro */
+  :root.dark-mode {
+    --background-color: #333; /* Cor de fundo escuro */
+    --text-color: #f2f2f2; /* Cor de texto escuro */
+  }
+</style>
+
+<!-- Adicione um script para mudar o tema ao clicar no botão -->
+<script>
+  const darkModeBtn = document.getElementById('dark-mode-btn');
+  const root = document.querySelector(':root');
+
+  darkModeBtn.addEventListener('click', () => {
+    root.classList.toggle('dark-mode');
+  });
+</script>
     </section>
   </main>
   </footer>
